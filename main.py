@@ -37,26 +37,26 @@ response = client.responses.create(
 				VECTOR_STORE_ID
 			]
 		},
-		{
-			"type": "web_search",
-			"user_location": {
-				"type": "approximate",
-				"country": "US",
-				"region": "Pennsylvania",
-				"city": "Hatboro"
-			},
-			"search_context_size": "medium",
-			"filters": {
-				"allowed_domains": [
-					"amazon.com",
-					"ledlightingsupply.com",
-					"greenlightdepot.com",
-					"ledmyplace.com",
-					"e-conolight.com",
-					"superbrightleds.com"
-				]
-			}
-		}
+		# {
+		# 	"type": "web_search",
+		# 	"user_location": {
+		# 		"type": "approximate",
+		# 		"country": "US",
+		# 		"region": "Pennsylvania",
+		# 		"city": "Hatboro"
+		# 	},
+		# 	"search_context_size": "medium",
+		# 	"filters": {
+		# 		"allowed_domains": [
+		# 			"amazon.com",
+		# 			"ledlightingsupply.com",
+		# 			"greenlightdepot.com",
+		# 			"ledmyplace.com",
+		# 			"e-conolight.com",
+		# 			"superbrightleds.com"
+		# 		]
+		# 	}
+		# }
 	],
 	store=True,
 	include=[
