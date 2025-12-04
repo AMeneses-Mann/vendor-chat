@@ -15,3 +15,23 @@ key_dlc_version = "DLC Version"
 key_dlc_integrated_control = "DLC Integrated Control"
 key_quantity_in_pack = "Quantity In Pack"
 key_vendor = "Vendor"
+
+print(example_row)
+test = csv_to_json(example_row)
+save_csv(example_row, "./", "products.csv")
+print(test)
+
+
+
+response = client.chat.completions.create(
+    model="gpt-4.1",
+    messages=[
+        {
+            "role": "user",
+            "content": [
+                {"type": "text", "text": "Analyze this JSON:"},
+                {"type": "json", "json": payload}
+            ]
+        }
+    ]
+)
