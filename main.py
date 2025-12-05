@@ -99,7 +99,7 @@ def ai_search_web(data):
       input=[
         {
           "role": "user", "content":
-          "Can you find the products included in the following json on amazon.com?\n\n{data}\n\n"
+          f"See if you can find the products contained in the following json on amazon.com (US):\n\n{data}\n\n"
         },
       ],
       text={"format": {"type": "text"}, "verbosity": "low"},
@@ -117,8 +117,8 @@ def ai_search_web(data):
         if event.type == "response.reasoning_summary_text.done":
           status_text += event.text + "\n"
           print(status_text)
-        elif event.type == "response.file_search_call.in_progress":
-          status_text += "\nSearching file\n"
+        elif event.type == "response.web_search_call.in_progress":
+          status_text += "\nSearching web\n"
           print(status_text)
         elif event.type == "response.output_text.done":
           final_output = event.text
